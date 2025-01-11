@@ -61,5 +61,5 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker tag flask-app ghcr.io/d4rk0n3dev/flask-app:latest
-        docker push ghcr.io/d4rk0n3dev/flask-app:latest
+        docker tag flask-app ghcr.io/${{ github.actor }}/flask-app:latest
+        docker push ghcr.io/${{ github.actor }}/flask-app:latest
