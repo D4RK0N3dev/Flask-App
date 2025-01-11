@@ -56,4 +56,4 @@ The project uses GitHub Actions to automate the CI process. The CI workflow is d
    - **Build Docker image**: The workflow builds the Docker image for the Flask application.
    - **Run basic tests**: The workflow runs a basic test step (`echo "Test"`).
    - **Log in to GitHub Container Registry**: The workflow logs in to the GitHub Container Registry using the provided GitHub token.
-   - **Push Docker image**: The workflow tags and pushes the Docker image to the GitHub Container Registry.
+   - **Push Docker image**: The workflow tags and pushes the Docker image to the GitHub Container Registry under the user's account.
