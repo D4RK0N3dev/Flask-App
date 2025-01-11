@@ -31,3 +31,29 @@
 
 4. **Access the Flask application**:
    Open a web browser and go to `http://localhost:5000` to see the Flask application running.
+
+## CI Automation
+
+The project uses GitHub Actions to automate the CI process. The CI workflow is defined in the `.github/workflows/ci.yml` file.
+
+### CI Process for Pull Requests
+
+1. **Trigger**: The CI process runs automatically on every pull request to any branch.
+2. **Steps**:
+   - **Checkout code**: The workflow checks out the code from the repository.
+   - **Set up Python**: The workflow sets up Python 3.9.
+   - **Install dependencies**: The workflow installs the dependencies specified in `requirements.txt`.
+   - **Build Docker image**: The workflow builds the Docker image for the Flask application.
+   - **Run basic tests**: The workflow runs a basic test step (`echo "Test"`).
+
+### CI Process for Merges to Main Branch
+
+1. **Trigger**: The CI process runs automatically on every merge to the `main` branch.
+2. **Steps**:
+   - **Checkout code**: The workflow checks out the code from the repository.
+   - **Set up Python**: The workflow sets up Python 3.9.
+   - **Install dependencies**: The workflow installs the dependencies specified in `requirements.txt`.
+   - **Build Docker image**: The workflow builds the Docker image for the Flask application.
+   - **Run basic tests**: The workflow runs a basic test step (`echo "Test"`).
+   - **Log in to GitHub Container Registry**: The workflow logs in to the GitHub Container Registry using the provided GitHub token.
+   - **Push Docker image**: The workflow tags and pushes the Docker image to the GitHub Container Registry.
